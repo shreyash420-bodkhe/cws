@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shreyas Bodkhe — Simple Webpage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#7dd3fc;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#071022);color:#e6eef8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+    .card{width:100%;max-width:900px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.6);overflow:hidden;display:grid;grid-template-columns:1fr 420px}
+    .content{padding:36px}
+    .logo{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+    .avatar{width:68px;height:68px;border-radius:12px;overflow:hidden;flex:0 0 68px;box-shadow:0 6px 18px rgba(13,19,32,0.6)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:28px;letter-spacing:-0.2px}
+    p.lead{margin:10px 0 20px;color:var(--muted);max-width:60%}
+    .bio{line-height:1.6;color:#d7e6f6}
+    .tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    .image-side{background:linear-gradient(180deg, rgba(125,211,252,0.06), rgba(125,211,252,0.02));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px}
+    .hero{width:100%;border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(6,12,22,0.6)}
+    .hero img{display:block;width:100%;height:100%;object-fit:cover}
+    .caption{margin-top:12px;color:var(--muted);font-size:13px}
+
+    .actions{margin-top:18px;display:flex;gap:10px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--accent);cursor:pointer;font-weight:600;text-decoration:none;display:inline-flex;align-items:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;}
+      .content{order:2}
+      .image-side{order:1}
+      p.lead{max-width:100%}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <section class="content">
+      <div class="logo">
+        <div class="avatar" aria-hidden="true">
+          <img src="SHREE.jpg" alt="Portrait thumbnail">
+        </div>
+        <div>
+          <h1>Shreyas Bodkhe</h1>
+          <p class="lead">Feeling free, curious, and building cool things — one line of code at a time.</p>
+        </div>
+      </div>
+
+      <div class="bio">
+        <p><strong>About me:</strong> Hi — I'm Shreyas. I'm a second-year BCS student who enjoys coding, traveling, music, and sports. I like clean code, simple designs, and learning something new every day.</p>
+
+        <p>Currently exploring web development, data science, and competitive programming. I build small projects to practice and learn — from clones and tiny apps to data cleaning and visualization exercises.</p>
+
+        <div class="tags" aria-hidden="false">
+          <span class="tag">Coding</span>
+          <span class="tag">Web Dev</span>
+          <span class="tag">Data Science</span>
+          <span class="tag">Music</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="#" role="button">Say Hi</a>
+        <a class="btn" href="#" role="button">View Projects</a>
+      </div>
+    </section>
+
+    <aside class="image-side" aria-label="Hero image">
+      <div class="hero" style="max-width:420px;">
+        <img src="3.jpg" alt="Nature — open sky and greenery">
+      </div>
+      <div class="caption">A little nature — inspiration for ideas and clear thinking.</div>
+    </aside>
+  </main>
+</body>
+</html>
