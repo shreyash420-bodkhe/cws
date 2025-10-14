@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobBoard | Employer Dashboard</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #0077ff;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Title */
+    .dashboard-title {
+      background: linear-gradient(to right, #0077ff, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .dashboard-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .dashboard-title p {
+      font-size: 18px;
+    }
+
+    /* Dashboard Container */
+    .dashboard {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      height: fit-content;
+    }
+
+    .sidebar h3 {
+      color: #0077ff;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 12px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #0077ff;
+    }
+
+    /* Main Content */
+    .main-content {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    .main-content h3 {
+      color: #0077ff;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .submit-btn {
+      background-color: #0077ff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #005fcc;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0077ff;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>JobBoard</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="job.html">Jobs</a>
+      <a href="employes.html">Employers</a>
+      <a href="candidates.html">Candidates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <section class="dashboard-title">
+    <h2>Employer Dashboard</h2>
+    <p>Manage your company profile and post new job openings easily.</p>
+  </section>
+
+  <!-- Employer Dashboard -->
+  <section class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">🏢 Company Profile</a></li>
+        <li><a href="#">📄 My Job Posts</a></li>
+        <li><a href="#">➕ Post New Job</a></li>
+        <li><a href="#">📬 Applications</a></li>
+        <li><a href="#">⚙️ Settings</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h3>Post a New Job</h3>
+
+      <form>
+        <div class="form-group">
+          <label for="title">Job Title</label>
+          <input type="text" id="title" placeholder="Enter job title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" placeholder="Enter company name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" placeholder="Enter location" required>
+        </div>
+
+        <div class="form-group">
+          <label for="type">Job Type</label>
+          <select id="type" required>
+            <option value="">Select Type</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Internship">Internship</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="salary">Salary Range</label>
+          <input type="text" id="salary" placeholder="e.g. ₹5-8 LPA">
+        </div>
+
+        <div class="form-group">
+          <label for="desc">Job Description</label>
+          <textarea id="desc" placeholder="Describe the job role..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Post Job</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 JobBoard | Designed by Shreyas Bodkhe</p>
+  </footer>
+
+</body>
+</html>

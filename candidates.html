@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobBoard | Candidate Dashboard</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #0077ff;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page Title */
+    .dashboard-title {
+      background: linear-gradient(to right, #0077ff, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .dashboard-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .dashboard-title p {
+      font-size: 18px;
+    }
+
+    /* Dashboard Layout */
+    .dashboard {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      height: fit-content;
+    }
+
+    .sidebar h3 {
+      color: #0077ff;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 12px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #0077ff;
+    }
+
+    /* Main Content */
+    .main-content {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .main-content h3 {
+      color: #0077ff;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .submit-btn {
+      background-color: #0077ff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #005fcc;
+    }
+
+    /* Applications Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #0077ff;
+      color: white;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+      background-color: #e0f0ff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0077ff;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>JobBoard</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="job.html">Jobs</a>
+      <a href="employes.html">Employers</a>
+      <a href="candidates.html">Candidates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <section class="dashboard-title">
+    <h2>Candidate Dashboard</h2>
+    <p>Manage your profile and track your job applications here.</p>
+  </section>
+
+  <!-- Dashboard Layout -->
+  <section class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">👤 Profile</a></li>
+        <li><a href="#">💼 My Applications</a></li>
+        <li><a href="#">📄 Update Resume</a></li>
+        <li><a href="#">⚙️ Settings</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h3>Update Profile</h3>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" placeholder="Enter your phone number">
+        </div>
+
+        <div class="form-group">
+          <label for="resume">Upload Resume</label>
+          <input type="file" id="resume">
+        </div>
+
+        <button type="submit" class="submit-btn">Update Profile</button>
+      </form>
+
+      <h3>My Applications</h3>
+      <table>
+        <tr>
+          <th>Job Title</th>
+          <th>Company</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Frontend Developer</td>
+          <td>TechVision</td>
+          <td>Applied</td>
+        </tr>
+        <tr>
+          <td>Data Analyst</td>
+          <td>DataCore</td>
+          <td>Interview Scheduled</td>
+        </tr>
+        <tr>
+          <td>Backend Engineer</td>
+          <td>CloudSoft</td>
+          <td>Rejected</td>
+        </tr>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 JobBoard | Designed by Shreyas Bodkhe</p>
+  </footer>
+
+</body>
+</html>
