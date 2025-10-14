@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #0077ff;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80') center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #ff6600;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #e55a00;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 60px 40px;
+      background: white;
+    }
+
+    .feature-box {
+      width: 300px;
+      text-align: center;
+      margin: 20px;
+      padding: 20px;
+      background: #f1f5ff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .feature-box h3 {
+      color: #0077ff;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0077ff;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Landing Page</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to My Website</h2>
+    <p>Design your ideas into reality. Learn HTML and CSS by creating stunning landing pages that stand out.</p>
+    <button class="btn">Get Started</button>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <h3>Simple Layout</h3>
+      <p>Learn to create structured and clean page layouts using HTML.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Creative Design</h3>
+      <p>Experiment with colors, fonts, and styles to create attractive web pages.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Responsive View</h3>
+      <p>Make your landing page look great on all devices.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Landing Page | Designed by Shreyas Bodkhe</p>
+  </footer>
+</body>
+</html>
